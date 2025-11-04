@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
+import { Routes, Route, Link } from 'react-router-dom'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Features'
@@ -81,44 +81,40 @@ function Placeholder({ title, children }) {
   )
 }
 
-function App() {
+export default function App() {
   return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Landing />} />
-        <Route path="/login" element={
-          <Placeholder title="Login">
-            <p className="text-slate-700 text-sm">Add your login form here.</p>
-          </Placeholder>
-        } />
-        <Route path="/register/user" element={
-          <Placeholder title="Create Advertiser Account">
-            <p className="text-slate-700 text-sm">User registration screen.</p>
-          </Placeholder>
-        } />
-        <Route path="/register/owner" element={
-          <Placeholder title="Create Owner Account">
-            <p className="text-slate-700 text-sm">Owner registration screen.</p>
-          </Placeholder>
-        } />
-        <Route path="/user" element={
-          <Placeholder title="Advertiser Dashboard">
-            <p className="text-slate-700 text-sm">Billboard browsing, map view, and booking history will live here.</p>
-          </Placeholder>
-        } />
-        <Route path="/owner" element={
-          <Placeholder title="Owner Dashboard">
-            <p className="text-slate-700 text-sm">Inventory management, bookings, and analytics will live here.</p>
-          </Placeholder>
-        } />
-        <Route path="*" element={
-          <Placeholder title="Page not found">
-            <p className="text-slate-700 text-sm">The page you’re looking for doesn’t exist.</p>
-          </Placeholder>
-        } />
-      </Routes>
-    </BrowserRouter>
+    <Routes>
+      <Route path="/" element={<Landing />} />
+      <Route path="/login" element={
+        <Placeholder title="Login">
+          <p className="text-slate-700 text-sm">Add your login form here.</p>
+        </Placeholder>
+      } />
+      <Route path="/register/user" element={
+        <Placeholder title="Create Advertiser Account">
+          <p className="text-slate-700 text-sm">User registration screen.</p>
+        </Placeholder>
+      } />
+      <Route path="/register/owner" element={
+        <Placeholder title="Create Owner Account">
+          <p className="text-slate-700 text-sm">Owner registration screen.</p>
+        </Placeholder>
+      } />
+      <Route path="/user" element={
+        <Placeholder title="Advertiser Dashboard">
+          <p className="text-slate-700 text-sm">Billboard browsing, map view, and booking history will live here.</p>
+        </Placeholder>
+      } />
+      <Route path="/owner" element={
+        <Placeholder title="Owner Dashboard">
+          <p className="text-slate-700 text-sm">Inventory management, bookings, and analytics will live here.</p>
+        </Placeholder>
+      } />
+      <Route path="*" element={
+        <Placeholder title="Page not found">
+          <p className="text-slate-700 text-sm">The page you’re looking for doesn’t exist.</p>
+        </Placeholder>
+      } />
+    </Routes>
   )
 }
-
-export default App

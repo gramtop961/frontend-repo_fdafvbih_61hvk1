@@ -1,5 +1,6 @@
 import Spline from '@splinetool/react-spline'
 import { MapPin, Building2 } from 'lucide-react'
+import { Link } from 'react-router-dom'
 
 export default function Hero() {
   return (
@@ -25,18 +26,18 @@ export default function Hero() {
               </p>
 
               <div className="mt-6 flex flex-wrap gap-3">
-                <a
-                  href="/user"
+                <Link
+                  to="/user"
                   className="inline-flex items-center justify-center rounded-md bg-slate-900 px-4 py-2.5 text-sm font-medium text-white shadow hover:bg-slate-800"
                 >
                   <MapPin className="mr-2 h-4 w-4" /> Browse Billboards
-                </a>
-                <a
-                  href="/owner"
+                </Link>
+                <Link
+                  to="/owner"
                   className="inline-flex items-center justify-center rounded-md bg-white/80 px-4 py-2.5 text-sm font-medium text-slate-900 ring-1 ring-slate-300 backdrop-blur hover:bg-white"
                 >
                   <Building2 className="mr-2 h-4 w-4" /> Owner Dashboard
-                </a>
+                </Link>
               </div>
 
               <div className="mt-4 flex items-center gap-4 text-xs text-slate-600">
